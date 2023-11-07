@@ -1,3 +1,6 @@
+Create database TrabajadoresPrueba
+use TrabajadoresPrueba
+
 /****** Object:  Table [dbo].[Departamento]    Script Date: 16/09/2021 18:52:13 ******/
 SET ANSI_NULLS ON
 GO
@@ -4293,3 +4296,11 @@ GO
 ALTER TABLE [dbo].[Trabajadores]  WITH CHECK ADD FOREIGN KEY([IdProvincia])
 REFERENCES [dbo].[Provincia] ([Id])
 GO
+
+Create Procedure SP_ListadoTrabajadores
+as
+begin
+	select * from Trabajadores
+end
+
+
